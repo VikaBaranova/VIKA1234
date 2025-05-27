@@ -1,0 +1,66 @@
+start ?2.1
+new a number
+set a 1
+loop fo (11>a)
+log string a
+set a a+1
+end fo
+delete a
+finish
+
+start ?2.2
+new a number
+new b number
+set a 1
+set b 1
+new fi number
+new ctd number
+
+loop mt1 (10 > a)
+loop mt2 (10 > b)
+set fi 0
+set ctd a  
+loop mul (ctd > 0)
+set fi fi + b
+set ctd ctd - 1
+end mul
+log string a >> " × " >> b >> " = " >> fi
+set b b + 1
+end mt2
+set b 1
+set a a + 1
+end mt1
+finish
+
+start ?2.3
+new a number
+new b number
+new c number
+new i number
+set i 1
+set b 2
+set c 2
+loop mul (c > i)
+set b b+c
+set i i+1
+end mul
+set a 2 + b
+log string "x = 2 + 2 * 2 = " >> a
+delete a
+delete b
+delete c
+delete i
+finish
+
+start
+new pi number
+new tc number
+new td number
+set tc 37700
+set td 120
+loop pif (tc > td)
+set tc tc - td
+set pi pi + 1
+end pif
+log string pi
+finish
